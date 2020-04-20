@@ -38,30 +38,6 @@ costing(231.5)
 
 # Based on walkthrough video
 
-def ground_shipping(weight):
-  if weight >= 10:
-    return weight * 4.75 + 20
-  elif weight >= 6:
-    return weight * 4.00 + 20
-  elif weight >= 2:
-    return weight * 3 + 20
-  else:
-    return weight * 1.5 + 20
-  
-print(ground_shipping(8.4))
-
-def drone_shipping(weight):
-  if weight >= 10:
-    return weight * 14.25
-  elif weight >= 6:
-    return weight * 12.00
-  elif weight >= 2:
-    return weight * 9.00
-  else:
-    return weight * 4.50
-  
-print(drone_shipping(1.5))
-
 def costing(weight):
   
   ground  = ground_shipping(weight)
