@@ -41,3 +41,30 @@ switch (randomNumber) {
     console.log(`${eightBall}`);
     break;
 }
+
+//Alternate writing
+if (randomNumber === 1) {
+  eightBall = 'It is certain'
+  console.log(`${eightBall}`);
+} else if (randomNumber === 2) {
+  eightBall = 'It is decidedly so'
+  console.log(`${eightBall}`);
+} else if (randomNumber === 3) {
+  eightBall = 'Reply hazy try again'
+  console.log(`${eightBall}`);
+} else if (randomNumber === 4) {
+  eightBall = 'Cannot predict now'
+  console.log(`${eightBall}`);
+} else if (randomNumber === 5) {
+  eightBall = 'Do not count on it'
+  console.log(`${eightBall}`);
+} else if (randomNumber === 6) {
+  eightBall = 'My sources say no'
+  console.log(`${eightBall}`);
+} else if (randomNumber === 7) {
+  eightBall = 'Outlook not so good'
+  console.log(`${eightBall}`);
+} else {
+  eightBall = 'Signs point to yes'
+  console.log(`${eightBall}`);
+}
