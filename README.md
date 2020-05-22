@@ -1,3 +1,3 @@
-# Codecademy-Calculating-Churn-Rate-Project
+# Codecademy Projects
 My solution to the project provided by codecademy
 Perhaps will be of help one day...
