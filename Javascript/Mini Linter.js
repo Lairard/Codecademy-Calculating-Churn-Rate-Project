@@ -37,6 +37,21 @@ console.log(separator);
 let reallyCounter = 0;
 let veryCounter = 0;
 let basicallyCounter = 0;
+
+for (let i = 0; i < storyWords.length; i++) {
+  for (let j = 0; j < overusedWords.length; j++) {
+    if (storyWords[i] === overusedWords[0]) {
+    reallyCounter += 1;
+  } else if (storyWords[i] === overusedWords[1]) {
+    veryCounter += 1;
+  } else if (storyWords[i] === overusedWords[2]) {
+    basicallyCounter +=1 ;
+  }
+}
+}
+//since there are 3 elements inside child loop, all counter divided by 3
+
+/*
 for (let i = 0; i < storyWords.length; i++) {
   if (storyWords[i] === overusedWords[0]) {
     reallyCounter += 1;
@@ -46,6 +61,7 @@ for (let i = 0; i < storyWords.length; i++) {
     basicallyCounter +=1;
   }
 }
+*/
 
 console.log('Really: ' + reallyCounter);
 console.log('Very: ' + veryCounter);
@@ -54,11 +70,28 @@ console.log(separator);
 
 //count sentences
 let sentences = 0;
+/*
 storyWords.forEach(word => {
   if (word[word.length-1] === '.' || word[word.length-1] === '!') {
     sentences+=1;
   }
-});
+})
+*/
+
+//harder way?
+last =  function(array, n) {
+  if (array == null) 
+    return void 0;
+  if (n == null) 
+     return array[array.length - 1];
+  return array.slice(Math.max(array.length - n, 0));  
+  }
+
+for (let i = 0; i < storyWords.length; i++) {
+  if (last(storyWords[i]) === '.' || last(storyWords[i]) === '!') {
+    sentences += 1;
+  }
+}
 
 console.log(sentences);
 console.log(separator);
@@ -85,5 +118,4 @@ function greatest(betterWords){
     ).pop();
 }
 
-//which word occur most frequently?
-console.log(greatest(betterWords))
+console.log(greatest(betterWords));
